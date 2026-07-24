@@ -107,7 +107,7 @@ export default function SettingsPage() {
                   <div className="pt-3.5 border-t border-slate-50 space-y-2 text-left text-xs">
                     <div className="flex justify-between"><span className="text-slate-500">Security Clearance</span> <Badge variant="dark">Tier 1 Admin</Badge></div>
                     <div className="flex justify-between"><span className="text-slate-500">Two Factor Status</span> <Badge variant="success">Enabled</Badge></div>
-                    <div className="flex justify-between"><span className="text-slate-500">Workspace Tenant</span> <span className="font-semibold text-slate-800">ESM HQ Org</span></div>
+                    <div className="flex justify-between"><span className="text-slate-500">Workspace Tenant</span> <span className="font-semibold text-slate-800">KAT HQ Org</span></div>
                   </div>
                 </Card>
               </div>

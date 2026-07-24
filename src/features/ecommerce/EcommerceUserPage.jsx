@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { 
   ShoppingBag, Heart, Star, CheckCircle, Search, 
   ArrowRight, ShieldCheck, CreditCard, ChevronRight, X, ShoppingCart, Plus, Minus
@@ -7,7 +8,8 @@ import {
 import { useApp } from '../../context/AppContext';
 import { Card, Badge, Button, Modal } from '../../components/UI';
 
-export default function EcommerceUserPage() {
+
+export default function EcommerceUserPage({ view }) {
   const { 
     productsList, 
     cart, 
@@ -17,8 +19,17 @@ export default function EcommerceUserPage() {
     placeOrder 
   } = useApp();
 
-  const [currentView, setCurrentView] = useState('shop'); // 'shop' | 'checkout' | 'success'
+  const navigate = useNavigate();
+  const [currentView, setCurrentView] = useState(view || 'shop'); // 'shop' | 'checkout' | 'success'
   const [placedOrderDetails, setPlacedOrderDetails] = useState(null);
+
+  useEffect(() => {
+    if (view) {
+      setCurrentView(view);
+    } else {
+      setCurrentView('shop');
+    }
+  }, [view]);
   
   // Catalog filters
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -42,8 +53,9 @@ export default function EcommerceUserPage() {
   });
 
   const cartTotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+  const cartItemsCount = cart.reduce((acc, item) => acc + item.quantity, 0);
 
-  const categories = ['All', 'Equipment', 'Footwear', 'Apparel', 'Accessories'];
+  const categories = ['All', 'Almonds', 'Pistachios', 'Cashews', 'Walnuts', 'Raisins', 'Assorted'];
 
   // Filtering products
   const filteredProducts = productsList.filter(p => {
@@ -218,7 +230,7 @@ export default function EcommerceUserPage() {
       {currentView === 'checkout' && (
         <div className="max-w-4xl mx-auto space-y-6 animate-in slide-in-from-bottom duration-250">
           <div className="flex items-center gap-2 text-sm font-semibold text-slate-500 mb-2">
-            <button onClick={() => setCurrentView('shop')} className="hover:text-slate-800">Shop Catalog</button>
+            <button onClick={() => navigate('/ecommerce')} className="hover:text-slate-800">Shop Catalog</button>
             <ChevronRight className="w-4 h-4" />
             <span className="text-slate-800">Payment Checkout</span>
           </div>
@@ -411,7 +423,7 @@ export default function EcommerceUserPage() {
           </Card>
 
           <Button 
-            onClick={() => { setCurrentView('shop'); }} 
+            onClick={() => { navigate('/ecommerce'); }} 
             variant="primary" 
             className="w-full py-3 font-semibold shadow-md"
           >

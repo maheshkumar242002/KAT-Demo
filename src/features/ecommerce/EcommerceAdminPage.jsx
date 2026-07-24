@@ -43,7 +43,7 @@ export default function EcommerceAdminPage() {
   const topProductsChartData = localProducts.slice(0, 4).map(p => ({
     name: p.name.split(' ').slice(0, 2).join(' '),
     Sales: p.price * 25, // Mock quantity multiplier
-    color: p.category === 'Equipment' ? '#2563EB' : '#10B981'
+    color: p.category === 'Almonds' ? '#2563EB' : '#10B981'
   }));
 
   const inventoryStockData = localProducts.map(p => ({
@@ -79,7 +79,7 @@ export default function EcommerceAdminPage() {
     // Reset Form
     setNewProductForm({
       name: '',
-      category: 'Equipment',
+      category: 'Almonds',
       price: '',
       stock: '',
       description: '',
@@ -386,10 +386,12 @@ export default function EcommerceAdminPage() {
                 onChange={(e) => setNewProductForm(prev => ({ ...prev, category: e.target.value }))}
                 className="w-full p-2 border border-slate-200 rounded-lg bg-white focus:outline-none"
               >
-                <option value="Equipment">Equipment</option>
-                <option value="Footwear">Footwear</option>
-                <option value="Apparel">Apparel</option>
-                <option value="Accessories">Accessories</option>
+                <option value="Almonds">Almonds</option>
+                <option value="Pistachios">Pistachios</option>
+                <option value="Cashews">Cashews</option>
+                <option value="Walnuts">Walnuts</option>
+                <option value="Raisins">Raisins</option>
+                <option value="Assorted">Assorted</option>
               </select>
             </div>
             <div className="space-y-1">

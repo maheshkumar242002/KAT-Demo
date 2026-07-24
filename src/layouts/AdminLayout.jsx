@@ -39,7 +39,7 @@ export default function AdminLayout() {
       <div className="flex items-center justify-between px-6 py-5 border-b border-slate-800">
         <Link to="/" className="flex items-center gap-3">
           <div className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-white font-bold text-lg font-display shadow-md">
-            E
+            K
           </div>
           {(!isSidebarCollapsed || isMobileSidebarOpen) && (
             <span className="font-display font-bold text-white text-lg tracking-wide">
@@ -190,7 +190,7 @@ export default function AdminLayout() {
                 </div>
                 <div className="hidden sm:block text-left">
                   <p className="text-xs font-semibold text-slate-700 leading-tight">Super Admin</p>
-                  <p className="text-[10px] text-slate-400">admin@esm.com</p>
+                  <p className="text-[10px] text-slate-400">admin@kat.com</p>
                 </div>
                 <ChevronDown className="w-4 h-4 text-slate-400 hidden sm:block" />
               </button>

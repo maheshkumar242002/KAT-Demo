@@ -88,14 +88,14 @@ export default function LandingPage() {
                 <div className="w-3 h-3 rounded-full bg-rose-500/70" />
                 <div className="w-3 h-3 rounded-full bg-amber-500/70" />
                 <div className="w-3 h-3 rounded-full bg-emerald-500/70" />
-                <div className="text-[10px] text-slate-500 ml-2 font-mono">https://dashboard.esm-management.com</div>
+                <div className="text-[10px] text-slate-500 ml-2 font-mono">https://dashboard.kat-management.com</div>
               </div>
 
               {/* Layout Content */}
               <div className="flex-grow flex gap-3 overflow-hidden text-slate-400">
                 {/* Mini Sidebar */}
                 <div className="w-16 md:w-20 bg-slate-900/50 rounded-xl p-2 flex flex-col gap-2.5 items-center">
-                  <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white text-xs font-bold font-display">E</div>
+                  <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white text-xs font-bold font-display">K</div>
                   <div className="w-full h-px bg-slate-800" />
                   <div className="w-6 h-6 rounded-md bg-slate-800/80 flex items-center justify-center text-slate-500"><GraduationCap className="w-3.5 h-3.5" /></div>
                   <div className="w-6 h-6 rounded-md bg-slate-800/80 flex items-center justify-center text-slate-500"><ShoppingBag className="w-3.5 h-3.5" /></div>

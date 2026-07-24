@@ -6,7 +6,8 @@ import {
   orders as initialOrders,
   bookings as initialBookings,
   notifications as initialNotifications,
-  activityTimeline as initialTimeline
+  activityTimeline as initialTimeline,
+  turfs as initialTurfs
 } from '../data/mockData';
 
 const AppContext = createContext();
@@ -18,6 +19,7 @@ export const AppProvider = ({ children }) => {
   const [productsList, setProductsList] = useState(initialProducts);
   const [ordersList, setOrdersList] = useState(initialOrders);
   const [bookingsList, setBookingsList] = useState(initialBookings);
+  const [turfsList, setTurfsList] = useState(initialTurfs);
   const [notificationList, setNotificationList] = useState(initialNotifications);
   const [timeline, setTimeline] = useState(initialTimeline);
 
@@ -28,7 +30,7 @@ export const AppProvider = ({ children }) => {
   // System settings state
   const [settings, setSettings] = useState({
     companyName: "KAT Groups Management System",
-    email: "admin@esm-management.com",
+    email: "admin@kat-groups.com",
     phone: "+1 (555) 019-2834",
     currency: "USD",
     taxRate: 18,
@@ -187,6 +189,7 @@ export const AppProvider = ({ children }) => {
       productsList,
       ordersList,
       bookingsList,
+      turfsList,
       notificationList,
       timeline,
       cart,

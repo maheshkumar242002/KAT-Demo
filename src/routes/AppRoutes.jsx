@@ -26,6 +26,7 @@ export default function AppRoutes() {
       <Route path="/" element={<UserLayout />}>
         <Route index element={<LandingPage />} />
         <Route path="ecommerce" element={<EcommerceUserPage />} />
+        <Route path="ecommerce/checkout" element={<EcommerceUserPage view="checkout" />} />
         <Route path="turf" element={<TurfUserPage />} />
       </Route>
 

@@ -6,7 +6,7 @@ import { Button, Card } from '../components/UI';
 
 export default function LoginPage() {
   const navigate = useNavigate();
-  const [email, setEmail] = useState('admin@esm-management.com');
+  const [email, setEmail] = useState('admin@kat-groups.com');
   const [password, setPassword] = useState('password123');
   const [isLoading, setIsLoading] = useState(false);
 
@@ -57,7 +57,7 @@ export default function LoginPage() {
 
           <div className="relative z-10 space-y-4">
             <p className="text-xs italic text-slate-300 leading-relaxed font-light">
-              "Switching our multi-facility academy operations and e-commerce distribution to ESM reduced overhead by 40%. The calendar bookings are absolute magic."
+              "Switching our multi-facility academy operations and e-commerce distribution to KAT reduced overhead by 40%. The calendar bookings are absolute magic."
             </p>
             <div>
               <p className="text-xs font-bold text-white">Jonathan Vance</p>

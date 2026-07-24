@@ -17,7 +17,7 @@ export default function UserLayout() {
 
   const navLinks = [
     { label: 'Home', path: '/' },
-    { label: 'Shop Sports Gear', path: '/ecommerce' },
+    { label: 'Nuts', path: '/ecommerce' },
     { label: 'Book Turfs', path: '/turf' },
   ];
 
@@ -29,10 +29,10 @@ export default function UserLayout() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-white font-bold text-lg font-display shadow-md">
-              E
+              K
             </div>
             <span className="font-display font-bold text-slate-900 text-lg tracking-wide">
-              ESM Portal
+              KAT Portal
             </span>
           </Link>
 
@@ -177,7 +177,7 @@ export default function UserLayout() {
           </div>
           <hr className="my-8 border-slate-800" />
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
-            <span>&copy; {new Date().getFullYear()} ESM Management System. All demo rights reserved.</span>
+            <span>&copy; {new Date().getFullYear()} KAT Management System. All demo rights reserved.</span>
             <div className="flex gap-6">
               <a href="#" className="hover:text-white transition-colors">Privacy Agreement</a>
               <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
