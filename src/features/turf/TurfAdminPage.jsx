@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   CalendarDays, DollarSign, Activity, Users, Plus, Edit, 
-  Trash2, XCircle, CheckCircle2, ChevronRight, BarChart, Clock
+  Trash2, XCircle, CheckCircle2, ChevronRight, BarChart, Clock,
+  MapPin
 } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, Badge, Button, Modal, Tabs } from '../../components/UI';
